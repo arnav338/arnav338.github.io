@@ -1,14 +1,14 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" class="scroll-smooth">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Arnav Malhotra — Senior Java Backend & Distributed Systems Engineer</title>
   
-  <!-- Fonts: Google Fonts Newsreader (Editorial Serif) + Inter (Crisp Sans) + JetBrains Mono -->
+  <!-- Modern Inter & JetBrains Mono fonts for maximum legibility -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=JetBrains+Mono:wght@400;500&family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,500;0,6..72,600;1,6..72,400&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
   
   <!-- Tailwind CSS CDN -->
   <script src="https://cdn.tailwindcss.com"></script>
@@ -17,21 +17,21 @@
       theme: {
         extend: {
           fontFamily: {
-            serif: ['Newsreader', 'Georgia', 'serif'],
-            sans: ['Inter', '-apple-system', 'sans-serif'],
+            sans: ['Inter', '-apple-system', 'BlinkMacSystemFont', 'sans-serif'],
             mono: ['"JetBrains Mono"', 'monospace'],
           },
           colors: {
-            canvas: '#0f0e0d',        // Warm charcoal espresso
-            surface: '#171614',       // Elevated warm card
-            'surface-hover': '#1f1e1a',
-            border: '#292723',        // Subtle warm border
-            'border-light': '#3b3832',
-            cream: '#f4f1ea',         // Off-white / warm ivory headline
-            muted: '#9e978e',         // Warm stone body text
-            subtle: '#6b665f',        // Footers and low-emphasis
-            accent: '#d4a373',        // Warm refined champagne/bronze
-            'accent-soft': '#3d2f21',
+            canvas: '#09090b',          // High-contrast deep dark (Zinc 950)
+            surface: '#141417',         // Clean elevated surface
+            'surface-hover': '#1c1c21',
+            border: '#27272a',          // Crisp border for definition
+            'border-light': '#3f3f46',
+            cream: '#ffffff',           // Crisp high-contrast pure white for headings
+            body: '#cbd5e1',            // Slate-300 for clear, comfortable reading (WCAG AAA)
+            muted: '#94a3b8',           // Slate-400 for subtext
+            accent: '#fbbf24',          // Vibrant warm gold accent
+            'accent-light': '#fef08a',
+            highlight: '#38bdf8',       // Secondary tech highlight
           }
         }
       }
@@ -40,378 +40,415 @@
 
   <style>
     ::selection {
-      background-color: #d4a373;
-      color: #0f0e0d;
+      background-color: #fbbf24;
+      color: #09090b;
     }
     .filter-btn.active {
-      background-color: #f4f1ea;
-      color: #0f0e0d;
-      border-color: #f4f1ea;
+      background-color: #ffffff;
+      color: #09090b;
+      border-color: #ffffff;
+      font-weight: 600;
     }
   </style>
 </head>
-<body class="bg-canvas text-cream font-sans antialiased min-h-screen">
+<body class="bg-canvas text-body font-sans antialiased selection:bg-accent selection:text-canvas">
 
-  <!-- Main Container -->
-  <div class="max-w-3xl mx-auto px-6 py-20 sm:py-28 space-y-24">
+  <!-- Desktop Two-Column / Mobile Stacked Layout -->
+  <div class="max-w-7xl mx-auto px-6 sm:px-10 py-12 lg:py-20">
+    <div class="lg:grid lg:grid-cols-12 lg:gap-16 items-start">
 
-    <!-- Hero Section: Editorial & High-Contrast -->
-    <header class="space-y-8">
-      
-      <!-- Top Meta Badge -->
-      <div class="flex items-center justify-between text-xs tracking-wider uppercase text-subtle font-mono border-b border-border pb-4">
-        <span>Arnav Malhotra</span>
-        <span class="flex items-center gap-2 text-emerald-400/90 font-mono normal-case">
-          <span class="w-1.5 h-1.5 rounded-full bg-emerald-400 animate-pulse"></span>
-          Available for Consulting & Contract
-        </span>
-      </div>
+      <!-- LEFT COLUMN: Sticky Header, Name, Pitch & Technical Skills (Sides on Desktop) -->
+      <aside class="lg:col-span-5 lg:sticky lg:top-16 space-y-10 lg:pr-4 pb-12 lg:pb-0 border-b lg:border-b-0 border-border">
+        
+        <!-- Identity & Large Name -->
+        <div class="space-y-4">
+          <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-emerald-950/80 border border-emerald-500/40 text-emerald-400 text-xs font-mono font-medium">
+            <span class="w-2 h-2 rounded-full bg-emerald-400 animate-pulse"></span>
+            Available for Contract & Consulting
+          </div>
 
-      <!-- Main Headline: Editorial Serif -->
-      <div class="space-y-6 pt-2">
-        <h1 class="font-serif text-4xl sm:text-6xl font-normal tracking-tight text-cream leading-[1.12]">
-          Architecting resilient, high-throughput distributed systems.
-        </h1>
-        <p class="text-base sm:text-lg text-muted font-sans font-light leading-relaxed max-w-2xl">
-          Senior Java Backend Engineer with <span class="text-cream font-normal">6.5+ years of experience</span> across <span class="text-cream font-normal">Oracle</span>, <span class="text-cream font-normal">Bharti Airtel</span>, and <span class="text-cream font-normal">LTI</span>. Specializing in asynchronous Kafka pipelines, non-blocking Spring WebFlux services, and zero-downtime Kubernetes deployments.
-        </p>
-      </div>
+          <!-- Big, Attention-Capturing Name -->
+          <h1 class="text-4xl sm:text-5xl lg:text-6xl font-extrabold tracking-tight text-white leading-[1.08]">
+            Arnav<br class="hidden sm:inline" /> Malhotra
+          </h1>
 
-      <!-- Action Links / CTAs -->
-      <div class="flex flex-wrap items-center gap-4 pt-2 font-mono text-xs">
-        <a href="mailto:arnavmalhotra338@gmail.com" 
-           class="px-5 py-3 rounded-full bg-cream text-canvas font-medium hover:bg-white hover:scale-[1.02] active:scale-[0.98] transition-all duration-200">
-          Get in Touch &rarr;
-        </a>
-        <a href="https://www.linkedin.com/in/arnav-malhotra" target="_blank" 
-           class="px-4 py-3 rounded-full border border-border hover:border-muted text-muted hover:text-cream transition-colors">
-          LinkedIn
-        </a>
-        <a href="https://github.com/arnav338" target="_blank" 
-           class="px-4 py-3 rounded-full border border-border hover:border-muted text-muted hover:text-cream transition-colors">
-          GitHub
-        </a>
-      </div>
-    </header>
+          <p class="text-lg sm:text-xl font-semibold text-accent leading-snug">
+            Senior Java Backend & Distributed Systems Engineer
+          </p>
 
-    <!-- Services / Focus Areas -->
-    <section class="space-y-6">
-      <div class="flex items-center justify-between border-b border-border pb-3">
-        <h2 class="font-mono text-xs uppercase tracking-widest text-subtle">What I Solve</h2>
-        <span class="text-xs text-subtle font-mono">01 / Capabilities</span>
-      </div>
-
-      <div class="grid sm:grid-cols-2 gap-4">
-        <div class="p-6 rounded-2xl bg-surface border border-border hover:border-border-light transition-all duration-200 space-y-3">
-          <div class="font-mono text-xs text-accent uppercase tracking-wider">01.01</div>
-          <h3 class="font-serif text-xl text-cream font-normal">Event-Driven Pipelines</h3>
-          <p class="text-xs sm:text-sm text-muted leading-relaxed">
-            High-throughput Apache Kafka and RabbitMQ architectures processing millions of messages/minute with idempotency, partition balancing, and dead-letter handling.
+          <p class="text-sm sm:text-base text-body leading-relaxed max-w-md pt-1">
+            <strong>6.5+ years of experience</strong> engineering event-driven architectures, high-concurrency microservices, and cloud-native systems handling enterprise scale (1M+ events/min).
           </p>
         </div>
 
-        <div class="p-6 rounded-2xl bg-surface border border-border hover:border-border-light transition-all duration-200 space-y-3">
-          <div class="font-mono text-xs text-accent uppercase tracking-wider">01.02</div>
-          <h3 class="font-serif text-xl text-cream font-normal">Reactive APIs & Low Latency</h3>
-          <p class="text-xs sm:text-sm text-muted leading-relaxed">
-            Non-blocking REST APIs using Spring WebFlux, JVM GC profiling (G1GC), and database connection tuning to slash P99 response times under peak load.
-          </p>
+        <!-- Quick Contacts & Links -->
+        <div class="flex flex-wrap items-center gap-3 pt-1">
+          <a href="mailto:arnavmalhotra338@gmail.com" 
+             class="px-5 py-2.5 rounded-lg bg-white text-canvas font-bold text-sm hover:bg-slate-100 hover:shadow-lg transition-all">
+            Get in Touch
+          </a>
+          <a href="https://www.linkedin.com/in/arnav-malhotra" target="_blank" 
+             class="px-4 py-2.5 rounded-lg bg-surface border border-border text-white text-sm font-medium hover:border-border-light hover:bg-surface-hover transition-colors">
+            LinkedIn
+          </a>
+          <a href="https://github.com/arnav338" target="_blank" 
+             class="px-4 py-2.5 rounded-lg bg-surface border border-border text-white text-sm font-medium hover:border-border-light hover:bg-surface-hover transition-colors">
+            GitHub
+          </a>
         </div>
 
-        <div class="p-6 rounded-2xl bg-surface border border-border hover:border-border-light transition-all duration-200 space-y-3">
-          <div class="font-mono text-xs text-accent uppercase tracking-wider">01.03</div>
-          <h3 class="font-serif text-xl text-cream font-normal">Identity & Master Data (MPI)</h3>
-          <p class="text-xs sm:text-sm text-muted leading-relaxed">
-            Distributed identity matching workflows, patient lifecycle orchestration, cross-system deduplication, and persistent audit logging across enterprise systems.
-          </p>
-        </div>
-
-        <div class="p-6 rounded-2xl bg-surface border border-border hover:border-border-light transition-all duration-200 space-y-3">
-          <div class="font-mono text-xs text-accent uppercase tracking-wider">01.04</div>
-          <h3 class="font-serif text-xl text-cream font-normal">Cloud & Microservices</h3>
-          <p class="text-xs sm:text-sm text-muted leading-relaxed">
-            Production microservices deployed on Kubernetes with Helm charts, StatefulSets, Secrets management, and infrastructure automation across OCI and AWS.
-          </p>
-        </div>
-      </div>
-    </section>
-
-    <!-- Case Studies / Selected Work with Interactive Filters -->
-    <section class="space-y-8" id="work">
-      <div class="flex items-center justify-between border-b border-border pb-3">
-        <h2 class="font-mono text-xs uppercase tracking-widest text-subtle">Selected Systems Work</h2>
-        <span class="text-xs text-subtle font-mono">02 / Proven Impact</span>
-      </div>
-
-      <!-- Interactive Filter Pills -->
-      <div class="flex flex-wrap gap-2 pt-1 font-mono text-xs">
-        <button onclick="filterProjects('all')" data-filter="all" 
-                class="filter-btn active px-4 py-2 rounded-full border border-border transition-all duration-200">
-          All (4)
-        </button>
-        <button onclick="filterProjects('streaming')" data-filter="streaming" 
-                class="filter-btn px-4 py-2 rounded-full border border-border text-muted hover:text-cream hover:border-border-light transition-all duration-200">
-          Event Streaming & Kafka
-        </button>
-        <button onclick="filterProjects('enterprise')" data-filter="enterprise" 
-                class="filter-btn px-4 py-2 rounded-full border border-border text-muted hover:text-cream hover:border-border-light transition-all duration-200">
-          Healthcare & Enterprise
-        </button>
-        <button onclick="filterProjects('cloud-ai')" data-filter="cloud-ai" 
-                class="filter-btn px-4 py-2 rounded-full border border-border text-muted hover:text-cream hover:border-border-light transition-all duration-200">
-          AI Engine & Modern Java
-        </button>
-      </div>
-
-      <!-- Projects Grid -->
-      <div class="space-y-6" id="projects-container">
-
-        <!-- Case 1: Bharti Airtel Recommendation Engine -->
-        <article class="project-item p-6 sm:p-8 rounded-2xl bg-surface border border-border hover:border-border-light transition-all duration-300 space-y-4" data-category="streaming">
-          <div class="flex flex-wrap items-baseline justify-between gap-2 border-b border-border/60 pb-3">
-            <span class="font-mono text-xs text-accent">Bharti Airtel &bull; Telecom Scale</span>
-            <span class="font-mono text-xs text-subtle">May 2022 – Apr 2025</span>
+        <!-- SIDEBAR: Core Java Skills & Tech Stack (Prominently Placed on Left) -->
+        <div class="pt-6 border-t border-border space-y-6">
+          <div class="flex items-center justify-between">
+            <h2 class="text-xs uppercase tracking-widest text-muted font-mono font-bold">
+              Core Technical Index
+            </h2>
+            <span class="text-[11px] font-mono text-accent">6.5+ Yrs Deep Stack</span>
           </div>
 
+          <!-- Categorized Skills Grid -->
+          <div class="space-y-4 text-xs font-mono">
+            
+            <!-- Backend & Concurrency -->
+            <div class="space-y-2">
+              <span class="text-white font-semibold text-[11px] block text-slate-300">Backend & Concurrency</span>
+              <div class="flex flex-wrap gap-1.5">
+                <span class="px-2.5 py-1 rounded-md bg-surface border border-border text-white font-medium">Java (11 / 17 / 21)</span>
+                <span class="px-2.5 py-1 rounded-md bg-surface border border-border text-white font-medium">Spring Boot</span>
+                <span class="px-2.5 py-1 rounded-md bg-surface border border-border text-highlight font-medium">Spring WebFlux</span>
+                <span class="px-2.5 py-1 rounded-md bg-surface border border-border text-slate-300">Reactive Programming</span>
+                <span class="px-2.5 py-1 rounded-md bg-surface border border-border text-slate-300">Spring AOP</span>
+                <span class="px-2.5 py-1 rounded-md bg-surface border border-border text-slate-300">REST APIs</span>
+              </div>
+            </div>
+
+            <!-- Event Streaming & Queues -->
+            <div class="space-y-2">
+              <span class="text-white font-semibold text-[11px] block text-slate-300">Event Streaming & Queues</span>
+              <div class="flex flex-wrap gap-1.5">
+                <span class="px-2.5 py-1 rounded-md bg-surface border border-border text-accent font-medium">Apache Kafka (1M+ msg/min)</span>
+                <span class="px-2.5 py-1 rounded-md bg-surface border border-border text-white font-medium">RabbitMQ</span>
+                <span class="px-2.5 py-1 rounded-md bg-surface border border-border text-slate-300">Event-Driven Architecture</span>
+              </div>
+            </div>
+
+            <!-- Data & Caching -->
+            <div class="space-y-2">
+              <span class="text-white font-semibold text-[11px] block text-slate-300">Databases & Performance</span>
+              <div class="flex flex-wrap gap-1.5">
+                <span class="px-2.5 py-1 rounded-md bg-surface border border-border text-white font-medium">PostgreSQL</span>
+                <span class="px-2.5 py-1 rounded-md bg-surface border border-border text-white font-medium">Redis Caching</span>
+                <span class="px-2.5 py-1 rounded-md bg-surface border border-border text-slate-300">MongoDB</span>
+                <span class="px-2.5 py-1 rounded-md bg-surface border border-border text-slate-300">SQL Tuning</span>
+                <span class="px-2.5 py-1 rounded-md bg-surface border border-border text-slate-300">JVM GC Profiling</span>
+              </div>
+            </div>
+
+            <!-- Cloud & Orchestration -->
+            <div class="space-y-2">
+              <span class="text-white font-semibold text-[11px] block text-slate-300">Cloud & Infrastructure</span>
+              <div class="flex flex-wrap gap-1.5">
+                <span class="px-2.5 py-1 rounded-md bg-surface border border-border text-white font-medium">Kubernetes & Helm</span>
+                <span class="px-2.5 py-1 rounded-md bg-surface border border-border text-white font-medium">Docker</span>
+                <span class="px-2.5 py-1 rounded-md bg-surface border border-border text-slate-300">OCI Cloud</span>
+                <span class="px-2.5 py-1 rounded-md bg-surface border border-border text-slate-300">Terraform</span>
+                <span class="px-2.5 py-1 rounded-md bg-surface border border-border text-slate-300">CI/CD Deployments</span>
+              </div>
+            </div>
+
+          </div>
+        </div>
+
+      </aside>
+
+      <!-- RIGHT COLUMN: Services, Filtered Systems Work & Case Studies -->
+      <main class="lg:col-span-7 space-y-16 pt-8 lg:pt-0">
+
+        <!-- SECTION 1: Core Offerings (Market-Ready Terminology) -->
+        <section class="space-y-6">
+          <div class="flex items-center justify-between border-b border-border pb-3">
+            <h2 class="text-xs uppercase tracking-widest text-muted font-mono font-bold">
+              Engineering Services
+            </h2>
+            <span class="text-xs text-muted font-mono">Capabilities</span>
+          </div>
+
+          <div class="grid sm:grid-cols-2 gap-4">
+            
+            <div class="p-5 rounded-xl bg-surface border border-border hover:border-border-light transition-all duration-200 space-y-2.5">
+              <div class="flex items-center justify-between">
+                <h3 class="font-bold text-white text-base">Event-Driven Systems</h3>
+                <span class="text-xs font-mono text-accent">Kafka</span>
+              </div>
+              <p class="text-sm text-body leading-relaxed">
+                Designing high-throughput asynchronous messaging fabrics with Apache Kafka and RabbitMQ. Zero data loss, consumer group scaling, and dead-letter queue architectures.
+              </p>
+            </div>
+
+            <div class="p-5 rounded-xl bg-surface border border-border hover:border-border-light transition-all duration-200 space-y-2.5">
+              <div class="flex items-center justify-between">
+                <h3 class="font-bold text-white text-base">High-Throughput Reactive APIs</h3>
+                <span class="text-xs font-mono text-highlight">WebFlux</span>
+              </div>
+              <p class="text-sm text-body leading-relaxed">
+                Building non-blocking, asynchronous RESTful APIs using Spring WebFlux. Capable of handling 100+ TPS and massive concurrent connections with minimal memory footprints.
+              </p>
+            </div>
+
+            <div class="p-5 rounded-xl bg-surface border border-border hover:border-border-light transition-all duration-200 space-y-2.5">
+              <div class="flex items-center justify-between">
+                <h3 class="font-bold text-white text-base">Performance & Latency Tuning</h3>
+                <span class="text-xs font-mono text-emerald-400">P99 SLA</span>
+              </div>
+              <p class="text-sm text-body leading-relaxed">
+                JVM heap and GC profiling, connection pooling optimizations, and query refactoring to eliminate bottleneck queries and slash P99 latency up to 40%.
+              </p>
+            </div>
+
+            <div class="p-5 rounded-xl bg-surface border border-border hover:border-border-light transition-all duration-200 space-y-2.5">
+              <div class="flex items-center justify-between">
+                <h3 class="font-bold text-white text-base">Distributed Systems & Cloud</h3>
+                <span class="text-xs font-mono text-white">K8s & OCI</span>
+              </div>
+              <p class="text-sm text-body leading-relaxed">
+                Architecting resilient microservices deployed via Kubernetes StatefulSets and Helm charts. Infrastructure-as-code automation, multi-team contract design, and zero-downtime releases.
+              </p>
+            </div>
+
+          </div>
+        </section>
+
+        <!-- SECTION 2: Production Case Studies with Category Filters -->
+        <section class="space-y-6" id="systems">
+          <div class="flex items-center justify-between border-b border-border pb-3">
+            <h2 class="text-xs uppercase tracking-widest text-muted font-mono font-bold">
+              Featured Systems & Case Studies
+            </h2>
+            <span class="text-xs text-muted font-mono">Proven Impact</span>
+          </div>
+
+          <!-- Interactive Filter Tabs -->
+          <div class="flex flex-wrap gap-2 font-mono text-xs">
+            <button onclick="filterWork('all')" data-filter="all" 
+                    class="filter-btn active px-3.5 py-1.5 rounded-full border border-border transition-all">
+              All Systems
+            </button>
+            <button onclick="filterWork('streaming')" data-filter="streaming" 
+                    class="filter-btn px-3.5 py-1.5 rounded-full border border-border text-muted hover:text-white transition-all">
+              Event Streaming & Kafka
+            </button>
+            <button onclick="filterWork('enterprise')" data-filter="enterprise" 
+                    class="filter-btn px-3.5 py-1.5 rounded-full border border-border text-muted hover:text-white transition-all">
+              Distributed Systems
+            </button>
+            <button onclick="filterWork('modern-java')" data-filter="modern-java" 
+                    class="filter-btn px-3.5 py-1.5 rounded-full border border-border text-muted hover:text-white transition-all">
+              Java 21 & AI
+            </button>
+          </div>
+
+          <!-- Systems Work Cards -->
+          <div class="space-y-5" id="case-studies">
+
+            <!-- Card 1: 1M Kafka / Reactive Recommendation Engine -->
+            <article class="work-card p-6 rounded-2xl bg-surface border border-border hover:border-border-light transition-all space-y-4" data-type="streaming">
+              <div class="flex flex-wrap items-center justify-between gap-2">
+                <span class="text-xs font-mono text-accent font-semibold">Real-Time Event Streaming</span>
+                <span class="text-xs font-mono text-muted">Telecom Infrastructure</span>
+              </div>
+
+              <div class="space-y-2">
+                <h3 class="text-xl font-bold text-white tracking-tight">
+                  High-Throughput Reactive Recommendation & Offer Engine
+                </h3>
+                <p class="text-sm text-body leading-relaxed">
+                  Engineered an asynchronous, non-blocking customer recommendation system. Integrated Kafka producers and consumers to decouple request ingestion from dynamic offer computations across national telecom subscriber pipelines.
+                </p>
+              </div>
+
+              <!-- High-Contrast Metrics Box -->
+              <div class="p-4 rounded-xl bg-canvas border border-border font-mono text-xs space-y-2">
+                <div class="flex items-center gap-2 text-white">
+                  <span class="w-1.5 h-1.5 rounded-full bg-accent"></span>
+                  <strong>Scale:</strong> 1,000,000+ Kafka messages processed per minute
+                </div>
+                <div class="flex items-center gap-2 text-white">
+                  <span class="w-1.5 h-1.5 rounded-full bg-highlight"></span>
+                  <strong>Throughput:</strong> 100+ TPS sustained through Spring WebFlux reactive endpoints
+                </div>
+                <div class="flex items-center gap-2 text-white">
+                  <span class="w-1.5 h-1.5 rounded-full bg-emerald-400"></span>
+                  <strong>Optimization:</strong> 40% reduction in API response times through caching & DB index tuning
+                </div>
+              </div>
+
+              <div class="flex flex-wrap gap-2 text-xs font-mono text-muted pt-1">
+                <span class="px-2.5 py-1 rounded bg-canvas border border-border text-slate-300">Java 21</span>
+                <span class="px-2.5 py-1 rounded bg-canvas border border-border text-slate-300">Spring Boot</span>
+                <span class="px-2.5 py-1 rounded bg-canvas border border-border text-slate-300">Spring WebFlux</span>
+                <span class="px-2.5 py-1 rounded bg-canvas border border-border text-accent font-medium">Apache Kafka</span>
+                <span class="px-2.5 py-1 rounded bg-canvas border border-border text-slate-300">Redis</span>
+                <span class="px-2.5 py-1 rounded bg-canvas border border-border text-slate-300">PostgreSQL</span>
+              </div>
+            </article>
+
+            <!-- Card 2: Distributed MPI / Healthcare Exchange -->
+            <article class="work-card p-6 rounded-2xl bg-surface border border-border hover:border-border-light transition-all space-y-4" data-type="enterprise">
+              <div class="flex flex-wrap items-center justify-between gap-2">
+                <span class="text-xs font-mono text-accent font-semibold">Distributed Architecture</span>
+                <span class="text-xs font-mono text-muted">Enterprise Healthcare</span>
+              </div>
+
+              <div class="space-y-2">
+                <h3 class="text-xl font-bold text-white tracking-tight">
+                  Master Patient Index (MPI) Orchestration & Identity Matching
+                </h3>
+                <p class="text-sm text-body leading-relaxed">
+                  Architected distributed microservices for enterprise Healthcare Information Exchange (HIE). Designed fault-tolerant identity matching workflows (creation, update, merges, and persistent audit logging) integrating across disparate healthcare systems.
+                </p>
+              </div>
+
+              <!-- High-Contrast Metrics Box -->
+              <div class="p-4 rounded-xl bg-canvas border border-border font-mono text-xs space-y-2">
+                <div class="flex items-center gap-2 text-white">
+                  <span class="w-1.5 h-1.5 rounded-full bg-accent"></span>
+                  <strong>Modularity:</strong> 4+ independently configurable runtime components
+                </div>
+                <div class="flex items-center gap-2 text-white">
+                  <span class="w-1.5 h-1.5 rounded-full bg-highlight"></span>
+                  <strong>Integration:</strong> Asynchronous sync across 5+ dependent systems and external platforms
+                </div>
+                <div class="flex items-center gap-2 text-white">
+                  <span class="w-1.5 h-1.5 rounded-full bg-emerald-400"></span>
+                  <strong>Zero-Downtime:</strong> Automated Helm charts & StatefulSets deployments on OCI Kubernetes
+                </div>
+              </div>
+
+              <div class="flex flex-wrap gap-2 text-xs font-mono text-muted pt-1">
+                <span class="px-2.5 py-1 rounded bg-canvas border border-border text-slate-300">Java</span>
+                <span class="px-2.5 py-1 rounded bg-canvas border border-border text-slate-300">Spring Boot</span>
+                <span class="px-2.5 py-1 rounded bg-canvas border border-border text-slate-300">Kubernetes</span>
+                <span class="px-2.5 py-1 rounded bg-canvas border border-border text-slate-300">Helm</span>
+                <span class="px-2.5 py-1 rounded bg-canvas border border-border text-slate-300">OCI Cloud</span>
+                <span class="px-2.5 py-1 rounded bg-canvas border border-border text-slate-300">Distributed Transactions</span>
+              </div>
+            </article>
+
+            <!-- Card 3: Secure Self-KYC & Centralized Orchestration -->
+            <article class="work-card p-6 rounded-2xl bg-surface border border-border hover:border-border-light transition-all space-y-4" data-type="enterprise">
+              <div class="flex flex-wrap items-center justify-between gap-2">
+                <span class="text-xs font-mono text-accent font-semibold">Security & Orchestration</span>
+                <span class="text-xs font-mono text-muted">Omnichannel Integration</span>
+              </div>
+
+              <div class="space-y-2">
+                <h3 class="text-xl font-bold text-white tracking-tight">
+                  Smartphone Self-KYC & Order Orchestration Service
+                </h3>
+                <p class="text-sm text-body leading-relaxed">
+                  Developed Department of Telecommunications (DoT)-compliant smartphone identity verification and unified order processing connecting multiple Lines of Business (LOBs). Implemented custom Aspect-Oriented Programming (AOP) mechanisms for rigorous security and authorization validations.
+                </p>
+              </div>
+
+              <div class="p-4 rounded-xl bg-canvas border border-border font-mono text-xs space-y-2">
+                <div class="flex items-center gap-2 text-white">
+                  <span class="w-1.5 h-1.5 rounded-full bg-accent"></span>
+                  <strong>Compliance:</strong> Fully approved regulatory digital verification workflows
+                </div>
+                <div class="flex items-center gap-2 text-white">
+                  <span class="w-1.5 h-1.5 rounded-full bg-emerald-400"></span>
+                  <strong>Security:</strong> Declarative AOP-based authorization and input validation gates
+                </div>
+              </div>
+
+              <div class="flex flex-wrap gap-2 text-xs font-mono text-muted pt-1">
+                <span class="px-2.5 py-1 rounded bg-canvas border border-border text-slate-300">Java</span>
+                <span class="px-2.5 py-1 rounded bg-canvas border border-border text-slate-300">Spring Boot</span>
+                <span class="px-2.5 py-1 rounded bg-canvas border border-border text-slate-300">Spring AOP</span>
+                <span class="px-2.5 py-1 rounded bg-canvas border border-border text-slate-300">Security Architecture</span>
+                <span class="px-2.5 py-1 rounded bg-canvas border border-border text-slate-300">REST</span>
+              </div>
+            </article>
+
+            <!-- Card 4: Java 21 Local-First RAG Engine -->
+            <article class="work-card p-6 rounded-2xl bg-surface border border-border hover:border-border-light transition-all space-y-4" data-type="modern-java">
+              <div class="flex flex-wrap items-center justify-between gap-2">
+                <span class="text-xs font-mono text-accent font-semibold">Modern Java & AI</span>
+                <span class="text-xs font-mono text-muted">Research & Architecture</span>
+              </div>
+
+              <div class="space-y-2">
+                <h3 class="text-xl font-bold text-white tracking-tight">
+                  Local-First Semantic Vector Search & RAG Engine
+                </h3>
+                <p class="text-sm text-body leading-relaxed">
+                  Engineered a zero-cloud-dependency semantic search and retrieval engine using modern Java 21. Hand-crafted vector similarity math algorithms and embedded SQLite persistence to deliver sub-millisecond local document querying.
+                </p>
+              </div>
+
+              <div class="p-4 rounded-xl bg-canvas border border-border font-mono text-xs space-y-2">
+                <div class="flex items-center gap-2 text-white">
+                  <span class="w-1.5 h-1.5 rounded-full bg-accent"></span>
+                  <strong>Algorithms:</strong> Custom vector dot product and cosine similarity executed directly in Java
+                </div>
+                <div class="flex items-center gap-2 text-white">
+                  <span class="w-1.5 h-1.5 rounded-full bg-highlight"></span>
+                  <strong>Architecture:</strong> Zero external network latency with embedded SQLite persistence
+                </div>
+              </div>
+
+              <div class="flex flex-wrap gap-2 text-xs font-mono text-muted pt-1">
+                <span class="px-2.5 py-1 rounded bg-canvas border border-border text-white font-medium">Java 21</span>
+                <span class="px-2.5 py-1 rounded bg-canvas border border-border text-slate-300">Spring Boot 3</span>
+                <span class="px-2.5 py-1 rounded bg-canvas border border-border text-slate-300">Vector Math</span>
+                <span class="px-2.5 py-1 rounded bg-canvas border border-border text-slate-300">SQLite</span>
+                <span class="px-2.5 py-1 rounded bg-canvas border border-border text-slate-300">RESTful APIs</span>
+              </div>
+            </article>
+
+          </div>
+        </section>
+
+        <!-- SECTION 3: Bottom Call to Action -->
+        <footer class="p-8 rounded-2xl bg-surface border border-border space-y-6">
           <div class="space-y-2">
-            <h3 class="font-serif text-2xl text-cream font-normal">Real-Time Reactive Recommendation & Offer Engine</h3>
-            <p class="text-xs sm:text-sm text-muted leading-relaxed">
-              Architected a high-concurrency personalized recommendation platform. Integrated Kafka producers and consumers to decouple request ingestion from dynamic offer computations across national telecom subscriber pipelines.
+            <h3 class="text-2xl font-bold text-white tracking-tight">
+              Need reliable backend architecture or performance tuning?
+            </h3>
+            <p class="text-sm text-body leading-relaxed max-w-lg">
+              I am open for contract engagements, systems architecture reviews, high-throughput streaming design, and senior backend consulting.
             </p>
           </div>
 
-          <div class="p-4 rounded-xl bg-canvas/80 border border-border/80 font-mono text-xs space-y-2">
-            <div class="flex flex-col sm:flex-row sm:items-center gap-1 sm:gap-4 text-cream">
-              <span class="text-accent">&bull; Volume:</span> 1,000,000+ Kafka messages / minute
-            </div>
-            <div class="flex flex-col sm:flex-row sm:items-center gap-1 sm:gap-4 text-cream">
-              <span class="text-accent">&bull; Throughput:</span> 100+ TPS via Spring WebFlux reactive endpoints
-            </div>
-            <div class="flex flex-col sm:flex-row sm:items-center gap-1 sm:gap-4 text-cream">
-              <span class="text-accent">&bull; Latency:</span> 40% reduction in API response times through caching & DB tuning
-            </div>
+          <div class="flex flex-wrap items-center gap-4">
+            <a href="mailto:arnavmalhotra338@gmail.com" 
+               class="px-6 py-3 rounded-lg bg-white text-canvas font-bold text-sm hover:bg-slate-100 transition-all shadow-md">
+              Email: arnavmalhotra338@gmail.com &rarr;
+            </a>
+            <a href="https://www.linkedin.com/in/arnav-malhotra" target="_blank" 
+               class="px-5 py-3 rounded-lg bg-canvas border border-border text-white text-sm font-medium hover:border-border-light transition-colors">
+              Connect on LinkedIn
+            </a>
           </div>
 
-          <div class="pt-1 flex flex-wrap gap-2 text-[11px] font-mono text-subtle">
-            <span class="px-2.5 py-1 rounded-md bg-canvas border border-border">Java 21</span>
-            <span class="px-2.5 py-1 rounded-md bg-canvas border border-border">Spring Boot</span>
-            <span class="px-2.5 py-1 rounded-md bg-canvas border border-border">Spring WebFlux</span>
-            <span class="px-2.5 py-1 rounded-md bg-canvas border border-border">Apache Kafka</span>
-            <span class="px-2.5 py-1 rounded-md bg-canvas border border-border">Redis</span>
-            <span class="px-2.5 py-1 rounded-md bg-canvas border border-border">PostgreSQL</span>
+          <div class="pt-4 border-t border-border/60 text-xs font-mono text-muted flex justify-between items-center">
+            <span>Arnav Malhotra &bull; Senior Java Backend Consultant</span>
+            <span>Bengaluru, India</span>
           </div>
-        </article>
+        </footer>
 
-        <!-- Case 2: Oracle Master Patient Index (MPI) -->
-        <article class="project-item p-6 sm:p-8 rounded-2xl bg-surface border border-border hover:border-border-light transition-all duration-300 space-y-4" data-category="enterprise">
-          <div class="flex flex-wrap items-baseline justify-between gap-2 border-b border-border/60 pb-3">
-            <span class="font-mono text-xs text-accent">Oracle &bull; Healthcare Infrastructure</span>
-            <span class="font-mono text-xs text-subtle">Apr 2025 – Present</span>
-          </div>
+      </main>
 
-          <div class="space-y-2">
-            <h3 class="font-serif text-2xl text-cream font-normal">Master Patient Index (MPI) & Identity Exchange</h3>
-            <p class="text-xs sm:text-sm text-muted leading-relaxed">
-              Designed distributed microservices for Healthcare Information Exchange (HIE). Engineered patient matching workflows (creation, update, merge, and audit trails) with asynchronous cross-system reconciliation.
-            </p>
-          </div>
-
-          <div class="p-4 rounded-xl bg-canvas/80 border border-border/80 font-mono text-xs space-y-2">
-            <div class="flex flex-col sm:flex-row sm:items-center gap-1 sm:gap-4 text-cream">
-              <span class="text-accent">&bull; Modular Architecture:</span> 4+ independently configurable runtime components
-            </div>
-            <div class="flex flex-col sm:flex-row sm:items-center gap-1 sm:gap-4 text-cream">
-              <span class="text-accent">&bull; Integration:</span> Unified sync across 5+ dependent systems & external teams
-            </div>
-            <div class="flex flex-col sm:flex-row sm:items-center gap-1 sm:gap-4 text-cream">
-              <span class="text-accent">&bull; Infrastructure:</span> Zero-downtime Helm charts on Oracle Cloud (OCI) Kubernetes
-            </div>
-          </div>
-
-          <div class="pt-1 flex flex-wrap gap-2 text-[11px] font-mono text-subtle">
-            <span class="px-2.5 py-1 rounded-md bg-canvas border border-border">Java</span>
-            <span class="px-2.5 py-1 rounded-md bg-canvas border border-border">Spring Boot</span>
-            <span class="px-2.5 py-1 rounded-md bg-canvas border border-border">Kubernetes</span>
-            <span class="px-2.5 py-1 rounded-md bg-canvas border border-border">Helm</span>
-            <span class="px-2.5 py-1 rounded-md bg-canvas border border-border">OCI</span>
-            <span class="px-2.5 py-1 rounded-md bg-canvas border border-border">StatefulSets</span>
-          </div>
-        </article>
-
-        <!-- Case 3: Bharti Airtel KYC & Order Orchestration -->
-        <article class="project-item p-6 sm:p-8 rounded-2xl bg-surface border border-border hover:border-border-light transition-all duration-300 space-y-4" data-category="enterprise">
-          <div class="flex flex-wrap items-baseline justify-between gap-2 border-b border-border/60 pb-3">
-            <span class="font-mono text-xs text-accent">Bharti Airtel &bull; Security & Regulatory</span>
-            <span class="font-mono text-xs text-subtle">Enterprise Integration</span>
-          </div>
-
-          <div class="space-y-2">
-            <h3 class="font-serif text-2xl text-cream font-normal">Department of Telecom (DoT) Compliant Self-KYC</h3>
-            <p class="text-xs sm:text-sm text-muted leading-relaxed">
-              Developed secure smartphone-based digital KYC verification and an omnichannel Order Orchestration Service unifying multiple Lines of Business (LOBs). Implemented custom Aspect-Oriented Programming (AOP) annotations for strict authorization gates.
-            </p>
-          </div>
-
-          <div class="p-4 rounded-xl bg-canvas/80 border border-border/80 font-mono text-xs space-y-2">
-            <div class="flex flex-col sm:flex-row sm:items-center gap-1 sm:gap-4 text-cream">
-              <span class="text-accent">&bull; Compliance:</span> Strict regulatory compliance with DoT digital identity standards
-            </div>
-            <div class="flex flex-col sm:flex-row sm:items-center gap-1 sm:gap-4 text-cream">
-              <span class="text-accent">&bull; Architecture:</span> Centralized order workflow eliminating manual onboarding friction
-            </div>
-          </div>
-
-          <div class="pt-1 flex flex-wrap gap-2 text-[11px] font-mono text-subtle">
-            <span class="px-2.5 py-1 rounded-md bg-canvas border border-border">Java</span>
-            <span class="px-2.5 py-1 rounded-md bg-canvas border border-border">Spring Boot</span>
-            <span class="px-2.5 py-1 rounded-md bg-canvas border border-border">Spring AOP</span>
-            <span class="px-2.5 py-1 rounded-md bg-canvas border border-border">REST</span>
-            <span class="px-2.5 py-1 rounded-md bg-canvas border border-border">Security</span>
-          </div>
-        </article>
-
-        <!-- Case 4: Java 21 Local-First RAG Engine -->
-        <article class="project-item p-6 sm:p-8 rounded-2xl bg-surface border border-border hover:border-border-light transition-all duration-300 space-y-4" data-category="cloud-ai">
-          <div class="flex flex-wrap items-baseline justify-between gap-2 border-b border-border/60 pb-3">
-            <span class="font-mono text-xs text-accent">Personal Research &bull; Retrieval Systems</span>
-            <span class="font-mono text-xs text-subtle">2025</span>
-          </div>
-
-          <div class="space-y-2">
-            <h3 class="font-serif text-2xl text-cream font-normal">Local-First Retrieval-Augmented Generation (RAG)</h3>
-            <p class="text-xs sm:text-sm text-muted leading-relaxed">
-              Engineered a zero-cloud-dependency semantic search and retrieval engine using modern Java 21. Hand-crafted vector similarity math algorithms and embedded SQLite persistence to deliver lightning-fast local document querying.
-            </p>
-          </div>
-
-          <div class="p-4 rounded-xl bg-canvas/80 border border-border/80 font-mono text-xs space-y-2">
-            <div class="flex flex-col sm:flex-row sm:items-center gap-1 sm:gap-4 text-cream">
-              <span class="text-accent">&bull; Math Implementation:</span> Native vector dot product & cosine similarity in pure Java
-            </div>
-            <div class="flex flex-col sm:flex-row sm:items-center gap-1 sm:gap-4 text-cream">
-              <span class="text-accent">&bull; Footprint:</span> Embedded SQLite storage with instant sub-millisecond retrieval
-            </div>
-          </div>
-
-          <div class="pt-1 flex flex-wrap gap-2 text-[11px] font-mono text-subtle">
-            <span class="px-2.5 py-1 rounded-md bg-canvas border border-border">Java 21</span>
-            <span class="px-2.5 py-1 rounded-md bg-canvas border border-border">Spring Boot 3</span>
-            <span class="px-2.5 py-1 rounded-md bg-canvas border border-border">Vector Search</span>
-            <span class="px-2.5 py-1 rounded-md bg-canvas border border-border">SQLite</span>
-          </div>
-        </article>
-
-      </div>
-    </section>
-
-    <!-- Career Trajectory -->
-    <section class="space-y-6">
-      <div class="flex items-center justify-between border-b border-border pb-3">
-        <h2 class="font-mono text-xs uppercase tracking-widest text-subtle">Trajectory</h2>
-        <span class="text-xs text-subtle font-mono">03 / Experience</span>
-      </div>
-
-      <div class="space-y-4 font-mono text-xs">
-        <div class="p-4 rounded-xl bg-surface border border-border flex flex-col sm:flex-row sm:items-center justify-between gap-2">
-          <div>
-            <div class="text-cream text-sm font-sans font-medium">Application Software Engineer 2</div>
-            <div class="text-subtle">Oracle &bull; Healthcare Information Exchange (HIE)</div>
-          </div>
-          <div class="text-accent">Apr 2025 &ndash; Present</div>
-        </div>
-
-        <div class="p-4 rounded-xl bg-surface border border-border flex flex-col sm:flex-row sm:items-center justify-between gap-2">
-          <div>
-            <div class="text-cream text-sm font-sans font-medium">Senior Software Engineer</div>
-            <div class="text-subtle">Bharti Airtel &bull; Streaming & KYC Platforms</div>
-          </div>
-          <div class="text-muted">May 2022 &ndash; Apr 2025</div>
-        </div>
-
-        <div class="p-4 rounded-xl bg-surface border border-border flex flex-col sm:flex-row sm:items-center justify-between gap-2">
-          <div>
-            <div class="text-cream text-sm font-sans font-medium">Software Engineer</div>
-            <div class="text-subtle">Larsen & Toubro Infotech (LTI) &bull; Enterprise Digital Asset Management</div>
-          </div>
-          <div class="text-muted">Jun 2020 &ndash; Apr 2022</div>
-        </div>
-      </div>
-    </section>
-
-    <!-- Technical Index -->
-    <section class="space-y-6">
-      <div class="flex items-center justify-between border-b border-border pb-3">
-        <h2 class="font-mono text-xs uppercase tracking-widest text-subtle">Technical Index</h2>
-        <span class="text-xs text-subtle font-mono">04 / Stack</span>
-      </div>
-
-      <div class="p-6 rounded-2xl bg-surface border border-border space-y-4 font-mono text-xs">
-        <div class="grid sm:grid-cols-3 gap-4">
-          <div class="space-y-1.5">
-            <span class="text-accent uppercase tracking-wider text-[10px]">Languages</span>
-            <p class="text-muted leading-relaxed">Java (11, 17, 21), SQL, Bash</p>
-          </div>
-          <div class="space-y-1.5">
-            <span class="text-accent uppercase tracking-wider text-[10px]">Frameworks</span>
-            <p class="text-muted leading-relaxed">Spring Boot, Spring WebFlux, Spring Cloud, JDBC, AOP</p>
-          </div>
-          <div class="space-y-1.5">
-            <span class="text-accent uppercase tracking-wider text-[10px]">Streaming & Queues</span>
-            <p class="text-muted leading-relaxed">Apache Kafka, RabbitMQ, Event Sourcing</p>
-          </div>
-          <div class="space-y-1.5">
-            <span class="text-accent uppercase tracking-wider text-[10px]">Databases & Cache</span>
-            <p class="text-muted leading-relaxed">PostgreSQL, Redis, MongoDB, SQLite</p>
-          </div>
-          <div class="space-y-1.5">
-            <span class="text-accent uppercase tracking-wider text-[10px]">Cloud & Orchestration</span>
-            <p class="text-muted leading-relaxed">Kubernetes, Helm, Docker, OCI, Terraform, AWS</p>
-          </div>
-          <div class="space-y-1.5">
-            <span class="text-accent uppercase tracking-wider text-[10px]">Testing & Tooling</span>
-            <p class="text-muted leading-relaxed">JUnit 5, Mockito, Git, Prometheus, Grafana</p>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- Footer: Direct & Refined -->
-    <footer class="pt-12 border-t border-border space-y-8">
-      <div class="space-y-3">
-        <h2 class="font-serif text-3xl sm:text-4xl text-cream font-normal">
-          Let&rsquo;s discuss your systems architecture.
-        </h2>
-        <p class="text-sm text-muted max-w-lg leading-relaxed">
-          Open for freelance consulting, distributed system audits, high-throughput streaming design, and contract backend engineering.
-        </p>
-      </div>
-
-      <div class="flex flex-wrap items-center gap-4 font-mono text-xs">
-        <a href="mailto:arnavmalhotra338@gmail.com" 
-           class="px-5 py-3 rounded-full bg-cream text-canvas font-medium hover:bg-white hover:scale-[1.02] transition-all">
-          arnavmalhotra338@gmail.com &rarr;
-        </a>
-        <a href="https://www.linkedin.com/in/arnav-malhotra" target="_blank" 
-           class="px-4 py-3 rounded-full border border-border text-muted hover:text-cream transition-colors">
-          LinkedIn
-        </a>
-      </div>
-
-      <div class="pt-8 flex flex-col sm:flex-row items-start sm:items-center justify-between text-xs font-mono text-subtle border-t border-border/40 gap-2">
-        <span>Arnav Malhotra &bull; Bengaluru, India</span>
-        <span>Independent Systems Consultant</span>
-      </div>
-    </footer>
-
+    </div>
   </div>
 
-  <!-- Vanilla JS Filtering Logic -->
+  <!-- Vanilla JS Filtering -->
   <script>
-    function filterProjects(category) {
-      // Update buttons
+    function filterWork(type) {
+      // Toggle button states
       const buttons = document.querySelectorAll('.filter-btn');
       buttons.forEach(btn => {
-        if (btn.getAttribute('data-filter') === category) {
+        if (btn.getAttribute('data-filter') === type) {
           btn.classList.add('active');
           btn.classList.remove('text-muted');
         } else {
@@ -420,14 +457,14 @@
         }
       });
 
-      // Filter project cards
-      const items = document.querySelectorAll('.project-item');
-      items.forEach(item => {
-        const itemCat = item.getAttribute('data-category');
-        if (category === 'all' || itemCat === category) {
-          item.style.display = 'block';
+      // Filter work cards
+      const cards = document.querySelectorAll('.work-card');
+      cards.forEach(card => {
+        const cardType = card.getAttribute('data-type');
+        if (type === 'all' || cardType === type) {
+          card.style.display = 'block';
         } else {
-          item.style.display = 'none';
+          card.style.display = 'none';
         }
       });
     }
