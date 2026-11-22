@@ -21,18 +21,18 @@
             mono: ['"JetBrains Mono"', 'monospace'],
           },
           colors: {
-            canvas: '#090a0f',             // Deep Obsidian Graphite
-            surface: '#121218',            // Distinct elevated card surface
-            'surface-hover': '#181822',
-            border: '#20202c',             // Subtle balanced border
-            'border-light': '#2f2f40',
-            heading: '#ededef',            // Soft off-white (prevents halation/eye fatigue)
-            body: '#a1a1aa',               // Zinc-400 (smooth, easy reading contrast)
-            muted: '#71717a',              // Zinc-500 (subtext)
-            accent: '#818cf8',             // Signature Electric Indigo accent
-            'accent-hover': '#a5b4fc',
-            'accent-bg': 'rgba(129, 140, 248, 0.08)',
-            'accent-border': 'rgba(129, 140, 248, 0.25)',
+            canvas: '#f8fafc',             // Crisp, clean light canvas (Slate 50)
+            surface: '#ffffff',            // Pure white card surfaces
+            'surface-subtle': '#f1f5f9',   // Slate 100 for nested boxes
+            border: '#e2e8f0',             // Slate 200 hairline border
+            'border-light': '#cbd5e1',     // Slate 300 hover border
+            heading: '#0f172a',            // Slate 900 commanding text (17.5:1 contrast)
+            body: '#334155',               // Slate 700 effortless reading contrast
+            muted: '#64748b',              // Slate 500 for secondary metadata
+            accent: '#4f46e5',             // Enterprise Indigo-600
+            'accent-hover': '#4338ca',     // Indigo-700
+            'accent-light': '#eef2ff',     // Indigo-50 subtle surface
+            'accent-border': '#c7d2fe',    // Indigo-200 border
           }
         }
       }
@@ -41,18 +41,18 @@
 
   <style>
     ::selection {
-      background-color: #818cf8;
-      color: #090a0f;
+      background-color: #4f46e5;
+      color: #ffffff;
     }
     .filter-btn.active {
-      background-color: rgba(129, 140, 248, 0.12);
-      color: #c7d2fe;
-      border-color: rgba(129, 140, 248, 0.35);
+      background-color: #0f172a;
+      color: #ffffff;
+      border-color: #0f172a;
       font-weight: 500;
     }
   </style>
 </head>
-<body class="bg-canvas text-body font-sans antialiased selection:bg-accent selection:text-canvas">
+<body class="bg-canvas text-body font-sans antialiased selection:bg-accent selection:text-white">
 
   <!-- Desktop Two-Column / Mobile Stacked Layout -->
   <div class="max-w-7xl mx-auto px-6 sm:px-10 py-12 lg:py-20">
@@ -63,8 +63,8 @@
         
         <!-- Identity & Large Name -->
         <div class="space-y-4">
-          <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-surface border border-border text-xs font-mono text-heading">
-            <span class="w-2 h-2 rounded-full bg-emerald-400 animate-pulse"></span>
+          <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-emerald-50 border border-emerald-200 text-xs font-mono font-medium text-emerald-800">
+            <span class="w-2 h-2 rounded-full bg-emerald-500 animate-pulse"></span>
             Available for Contract & Consulting
           </div>
 
@@ -73,7 +73,7 @@
             Arnav<br class="hidden sm:inline" /> Malhotra
           </h1>
 
-          <p class="text-lg sm:text-xl font-medium text-accent leading-snug">
+          <p class="text-lg sm:text-xl font-semibold text-accent leading-snug">
             Senior Java Backend & Distributed Systems Engineer
           </p>
 
@@ -85,15 +85,15 @@
         <!-- Quick Contacts & Links -->
         <div class="flex flex-wrap items-center gap-3 pt-1">
           <a href="mailto:arnavmalhotra338@gmail.com" 
-             class="px-5 py-2.5 rounded-lg bg-heading text-canvas font-semibold text-sm hover:bg-white hover:shadow-lg transition-all">
+             class="px-5 py-2.5 rounded-lg bg-slate-900 text-white font-medium text-sm hover:bg-slate-800 hover:shadow transition-all">
             Get in Touch
           </a>
           <a href="https://www.linkedin.com/in/arnav-malhotra" target="_blank" 
-             class="px-4 py-2.5 rounded-lg bg-surface border border-border text-heading text-sm font-medium hover:border-border-light hover:bg-surface-hover transition-colors">
+             class="px-4 py-2.5 rounded-lg bg-surface border border-border text-heading text-sm font-medium hover:border-border-light hover:bg-slate-50 transition-colors shadow-sm">
             LinkedIn
           </a>
           <a href="https://github.com/arnav338" target="_blank" 
-             class="px-4 py-2.5 rounded-lg bg-surface border border-border text-heading text-sm font-medium hover:border-border-light hover:bg-surface-hover transition-colors">
+             class="px-4 py-2.5 rounded-lg bg-surface border border-border text-heading text-sm font-medium hover:border-border-light hover:bg-slate-50 transition-colors shadow-sm">
             GitHub
           </a>
         </div>
@@ -104,7 +104,7 @@
             <h2 class="text-xs uppercase tracking-widest text-muted font-mono font-semibold">
               Core Technical Index
             </h2>
-            <span class="text-[11px] font-mono text-accent">6.5+ Yrs Stack</span>
+            <span class="text-[11px] font-mono text-accent font-medium">6.5+ Yrs Stack</span>
           </div>
 
           <!-- Categorized Skills Grid -->
@@ -112,48 +112,48 @@
             
             <!-- Backend & Concurrency -->
             <div class="space-y-2">
-              <span class="text-heading font-medium text-[11px] block">Backend & Concurrency</span>
+              <span class="text-heading font-semibold text-[11px] block">Backend & Concurrency</span>
               <div class="flex flex-wrap gap-1.5">
-                <span class="px-2.5 py-1 rounded-md bg-surface border border-border text-heading">Java (11 / 17 / 21)</span>
-                <span class="px-2.5 py-1 rounded-md bg-surface border border-border text-heading">Spring Boot</span>
-                <span class="px-2.5 py-1 rounded-md bg-surface border border-accent-border text-accent">Spring WebFlux</span>
-                <span class="px-2.5 py-1 rounded-md bg-surface border border-border text-body">Reactive Architecture</span>
-                <span class="px-2.5 py-1 rounded-md bg-surface border border-border text-body">Spring AOP</span>
-                <span class="px-2.5 py-1 rounded-md bg-surface border border-border text-body">RESTful APIs</span>
+                <span class="px-2.5 py-1 rounded-md bg-surface border border-border text-heading shadow-xs">Java (11 / 17 / 21)</span>
+                <span class="px-2.5 py-1 rounded-md bg-surface border border-border text-heading shadow-xs">Spring Boot</span>
+                <span class="px-2.5 py-1 rounded-md bg-accent-light border border-accent-border text-accent font-medium">Spring WebFlux</span>
+                <span class="px-2.5 py-1 rounded-md bg-surface border border-border text-body shadow-xs">Reactive Architecture</span>
+                <span class="px-2.5 py-1 rounded-md bg-surface border border-border text-body shadow-xs">Spring AOP</span>
+                <span class="px-2.5 py-1 rounded-md bg-surface border border-border text-body shadow-xs">RESTful APIs</span>
               </div>
             </div>
 
             <!-- Event Streaming & Queues -->
             <div class="space-y-2">
-              <span class="text-heading font-medium text-[11px] block">Event Streaming & Queues</span>
+              <span class="text-heading font-semibold text-[11px] block">Event Streaming & Queues</span>
               <div class="flex flex-wrap gap-1.5">
-                <span class="px-2.5 py-1 rounded-md bg-surface border border-accent-border text-accent">Apache Kafka (1M+ msg/min)</span>
-                <span class="px-2.5 py-1 rounded-md bg-surface border border-border text-heading">RabbitMQ</span>
-                <span class="px-2.5 py-1 rounded-md bg-surface border border-border text-body">Event Sourcing</span>
+                <span class="px-2.5 py-1 rounded-md bg-accent-light border border-accent-border text-accent font-medium">Apache Kafka (1M+ msg/min)</span>
+                <span class="px-2.5 py-1 rounded-md bg-surface border border-border text-heading shadow-xs">RabbitMQ</span>
+                <span class="px-2.5 py-1 rounded-md bg-surface border border-border text-body shadow-xs">Event Sourcing</span>
               </div>
             </div>
 
             <!-- Data & Caching -->
             <div class="space-y-2">
-              <span class="text-heading font-medium text-[11px] block">Databases & Performance</span>
+              <span class="text-heading font-semibold text-[11px] block">Databases & Performance</span>
               <div class="flex flex-wrap gap-1.5">
-                <span class="px-2.5 py-1 rounded-md bg-surface border border-border text-heading">PostgreSQL</span>
-                <span class="px-2.5 py-1 rounded-md bg-surface border border-border text-heading">Redis Caching</span>
-                <span class="px-2.5 py-1 rounded-md bg-surface border border-border text-body">MongoDB</span>
-                <span class="px-2.5 py-1 rounded-md bg-surface border border-border text-body">SQL Index Tuning</span>
-                <span class="px-2.5 py-1 rounded-md bg-surface border border-border text-body">JVM GC Profiling</span>
+                <span class="px-2.5 py-1 rounded-md bg-surface border border-border text-heading shadow-xs">PostgreSQL</span>
+                <span class="px-2.5 py-1 rounded-md bg-surface border border-border text-heading shadow-xs">Redis Caching</span>
+                <span class="px-2.5 py-1 rounded-md bg-surface border border-border text-body shadow-xs">MongoDB</span>
+                <span class="px-2.5 py-1 rounded-md bg-surface border border-border text-body shadow-xs">SQL Index Tuning</span>
+                <span class="px-2.5 py-1 rounded-md bg-surface border border-border text-body shadow-xs">JVM GC Profiling</span>
               </div>
             </div>
 
             <!-- Cloud & Orchestration -->
             <div class="space-y-2">
-              <span class="text-heading font-medium text-[11px] block">Cloud & Infrastructure</span>
+              <span class="text-heading font-semibold text-[11px] block">Cloud & Infrastructure</span>
               <div class="flex flex-wrap gap-1.5">
-                <span class="px-2.5 py-1 rounded-md bg-surface border border-border text-heading">Kubernetes & Helm</span>
-                <span class="px-2.5 py-1 rounded-md bg-surface border border-border text-heading">Docker</span>
-                <span class="px-2.5 py-1 rounded-md bg-surface border border-border text-body">OCI Cloud</span>
-                <span class="px-2.5 py-1 rounded-md bg-surface border border-border text-body">Terraform</span>
-                <span class="px-2.5 py-1 rounded-md bg-surface border border-border text-body">CI/CD Automation</span>
+                <span class="px-2.5 py-1 rounded-md bg-surface border border-border text-heading shadow-xs">Kubernetes & Helm</span>
+                <span class="px-2.5 py-1 rounded-md bg-surface border border-border text-heading shadow-xs">Docker</span>
+                <span class="px-2.5 py-1 rounded-md bg-surface border border-border text-body shadow-xs">OCI Cloud</span>
+                <span class="px-2.5 py-1 rounded-md bg-surface border border-border text-body shadow-xs">Terraform</span>
+                <span class="px-2.5 py-1 rounded-md bg-surface border border-border text-body shadow-xs">CI/CD Automation</span>
               </div>
             </div>
 
@@ -176,40 +176,40 @@
 
           <div class="grid sm:grid-cols-2 gap-4">
             
-            <div class="p-5 rounded-xl bg-surface border border-border hover:border-border-light transition-all duration-200 space-y-2.5">
+            <div class="p-5 rounded-xl bg-surface border border-border hover:border-border-light hover:shadow-sm transition-all duration-200 space-y-2.5">
               <div class="flex items-center justify-between">
                 <h3 class="font-bold text-heading text-base">Event-Driven Systems</h3>
-                <span class="text-xs font-mono text-accent">Kafka</span>
+                <span class="text-xs font-mono text-accent font-medium">Kafka</span>
               </div>
               <p class="text-sm text-body leading-relaxed">
                 Designing high-throughput asynchronous messaging fabrics with Apache Kafka and RabbitMQ. Zero data loss, consumer group scaling, and dead-letter queue architectures.
               </p>
             </div>
 
-            <div class="p-5 rounded-xl bg-surface border border-border hover:border-border-light transition-all duration-200 space-y-2.5">
+            <div class="p-5 rounded-xl bg-surface border border-border hover:border-border-light hover:shadow-sm transition-all duration-200 space-y-2.5">
               <div class="flex items-center justify-between">
                 <h3 class="font-bold text-heading text-base">High-Throughput Reactive APIs</h3>
-                <span class="text-xs font-mono text-accent">WebFlux</span>
+                <span class="text-xs font-mono text-accent font-medium">WebFlux</span>
               </div>
               <p class="text-sm text-body leading-relaxed">
                 Building non-blocking, asynchronous RESTful APIs using Spring WebFlux. Capable of handling 100+ TPS and massive concurrent connections with minimal memory footprints.
               </p>
             </div>
 
-            <div class="p-5 rounded-xl bg-surface border border-border hover:border-border-light transition-all duration-200 space-y-2.5">
+            <div class="p-5 rounded-xl bg-surface border border-border hover:border-border-light hover:shadow-sm transition-all duration-200 space-y-2.5">
               <div class="flex items-center justify-between">
                 <h3 class="font-bold text-heading text-base">Performance & Latency Tuning</h3>
-                <span class="text-xs font-mono text-accent">P99 SLA</span>
+                <span class="text-xs font-mono text-accent font-medium">P99 SLA</span>
               </div>
               <p class="text-sm text-body leading-relaxed">
                 JVM heap and GC profiling, connection pooling optimizations, and query refactoring to eliminate bottleneck queries and slash P99 latency up to 40%.
               </p>
             </div>
 
-            <div class="p-5 rounded-xl bg-surface border border-border hover:border-border-light transition-all duration-200 space-y-2.5">
+            <div class="p-5 rounded-xl bg-surface border border-border hover:border-border-light hover:shadow-sm transition-all duration-200 space-y-2.5">
               <div class="flex items-center justify-between">
                 <h3 class="font-bold text-heading text-base">Distributed Systems & Cloud</h3>
-                <span class="text-xs font-mono text-accent">K8s & OCI</span>
+                <span class="text-xs font-mono text-accent font-medium">K8s & OCI</span>
               </div>
               <p class="text-sm text-body leading-relaxed">
                 Architecting resilient microservices deployed via Kubernetes StatefulSets and Helm charts. Infrastructure-as-code automation, multi-team contract design, and zero-downtime releases.
@@ -231,19 +231,19 @@
           <!-- Interactive Filter Tabs -->
           <div class="flex flex-wrap gap-2 font-mono text-xs">
             <button onclick="filterWork('all')" data-filter="all" 
-                    class="filter-btn active px-3.5 py-1.5 rounded-full border border-border transition-all">
+                    class="filter-btn active px-3.5 py-1.5 rounded-full border border-border shadow-xs transition-all">
               All Systems
             </button>
             <button onclick="filterWork('streaming')" data-filter="streaming" 
-                    class="filter-btn px-3.5 py-1.5 rounded-full border border-border text-muted hover:text-heading transition-all">
+                    class="filter-btn px-3.5 py-1.5 rounded-full bg-surface border border-border text-muted hover:text-heading hover:border-border-light transition-all">
               Event Streaming & Kafka
             </button>
             <button onclick="filterWork('enterprise')" data-filter="enterprise" 
-                    class="filter-btn px-3.5 py-1.5 rounded-full border border-border text-muted hover:text-heading transition-all">
+                    class="filter-btn px-3.5 py-1.5 rounded-full bg-surface border border-border text-muted hover:text-heading hover:border-border-light transition-all">
               Distributed Systems
             </button>
             <button onclick="filterWork('modern-java')" data-filter="modern-java" 
-                    class="filter-btn px-3.5 py-1.5 rounded-full border border-border text-muted hover:text-heading transition-all">
+                    class="filter-btn px-3.5 py-1.5 rounded-full bg-surface border border-border text-muted hover:text-heading hover:border-border-light transition-all">
               Java 21 & AI
             </button>
           </div>
@@ -252,9 +252,9 @@
           <div class="space-y-5" id="case-studies">
 
             <!-- Card 1: 1M Kafka / Reactive Recommendation Engine -->
-            <article class="work-card p-6 rounded-2xl bg-surface border border-border hover:border-border-light transition-all space-y-4" data-type="streaming">
+            <article class="work-card p-6 rounded-2xl bg-surface border border-border hover:border-border-light hover:shadow-sm transition-all space-y-4" data-type="streaming">
               <div class="flex flex-wrap items-center justify-between gap-2">
-                <span class="text-xs font-mono text-accent font-medium">Real-Time Event Streaming</span>
+                <span class="text-xs font-mono text-accent font-semibold">Real-Time Event Streaming</span>
                 <span class="text-xs font-mono text-muted">Telecom Infrastructure</span>
               </div>
 
@@ -267,8 +267,8 @@
                 </p>
               </div>
 
-              <!-- Metrics Box -->
-              <div class="p-4 rounded-xl bg-canvas border border-border font-mono text-xs space-y-2">
+              <!-- High-Contrast Metrics Box -->
+              <div class="p-4 rounded-xl bg-surface-subtle border border-border font-mono text-xs space-y-2">
                 <div class="flex items-center gap-2.5 text-heading">
                   <span class="w-1.5 h-1.5 rounded-full bg-accent"></span>
                   <span><strong>Scale:</strong> 1,000,000+ Kafka messages processed per minute</span>
@@ -284,19 +284,19 @@
               </div>
 
               <div class="flex flex-wrap gap-2 text-xs font-mono text-muted pt-1">
-                <span class="px-2.5 py-1 rounded bg-canvas border border-border text-body">Java 21</span>
+                <span class="px-2.5 py-1 rounded bg-canvas border border-border text-heading font-medium">Java 21</span>
                 <span class="px-2.5 py-1 rounded bg-canvas border border-border text-body">Spring Boot</span>
                 <span class="px-2.5 py-1 rounded bg-canvas border border-border text-body">Spring WebFlux</span>
-                <span class="px-2.5 py-1 rounded bg-canvas border border-accent-border text-accent font-medium">Apache Kafka</span>
+                <span class="px-2.5 py-1 rounded bg-accent-light border border-accent-border text-accent font-medium">Apache Kafka</span>
                 <span class="px-2.5 py-1 rounded bg-canvas border border-border text-body">Redis</span>
                 <span class="px-2.5 py-1 rounded bg-canvas border border-border text-body">PostgreSQL</span>
               </div>
             </article>
 
             <!-- Card 2: Distributed MPI / Healthcare Exchange -->
-            <article class="work-card p-6 rounded-2xl bg-surface border border-border hover:border-border-light transition-all space-y-4" data-type="enterprise">
+            <article class="work-card p-6 rounded-2xl bg-surface border border-border hover:border-border-light hover:shadow-sm transition-all space-y-4" data-type="enterprise">
               <div class="flex flex-wrap items-center justify-between gap-2">
-                <span class="text-xs font-mono text-accent font-medium">Distributed Architecture</span>
+                <span class="text-xs font-mono text-accent font-semibold">Distributed Architecture</span>
                 <span class="text-xs font-mono text-muted">Enterprise Healthcare</span>
               </div>
 
@@ -309,8 +309,8 @@
                 </p>
               </div>
 
-              <!-- Metrics Box -->
-              <div class="p-4 rounded-xl bg-canvas border border-border font-mono text-xs space-y-2">
+              <!-- High-Contrast Metrics Box -->
+              <div class="p-4 rounded-xl bg-surface-subtle border border-border font-mono text-xs space-y-2">
                 <div class="flex items-center gap-2.5 text-heading">
                   <span class="w-1.5 h-1.5 rounded-full bg-accent"></span>
                   <span><strong>Modularity:</strong> 4+ independently configurable runtime components</span>
@@ -326,7 +326,7 @@
               </div>
 
               <div class="flex flex-wrap gap-2 text-xs font-mono text-muted pt-1">
-                <span class="px-2.5 py-1 rounded bg-canvas border border-border text-body">Java</span>
+                <span class="px-2.5 py-1 rounded bg-canvas border border-border text-heading font-medium">Java</span>
                 <span class="px-2.5 py-1 rounded bg-canvas border border-border text-body">Spring Boot</span>
                 <span class="px-2.5 py-1 rounded bg-canvas border border-border text-body">Kubernetes</span>
                 <span class="px-2.5 py-1 rounded bg-canvas border border-border text-body">Helm</span>
@@ -336,9 +336,9 @@
             </article>
 
             <!-- Card 3: Secure Self-KYC & Centralized Orchestration -->
-            <article class="work-card p-6 rounded-2xl bg-surface border border-border hover:border-border-light transition-all space-y-4" data-type="enterprise">
+            <article class="work-card p-6 rounded-2xl bg-surface border border-border hover:border-border-light hover:shadow-sm transition-all space-y-4" data-type="enterprise">
               <div class="flex flex-wrap items-center justify-between gap-2">
-                <span class="text-xs font-mono text-accent font-medium">Security & Orchestration</span>
+                <span class="text-xs font-mono text-accent font-semibold">Security & Orchestration</span>
                 <span class="text-xs font-mono text-muted">Omnichannel Integration</span>
               </div>
 
@@ -351,7 +351,7 @@
                 </p>
               </div>
 
-              <div class="p-4 rounded-xl bg-canvas border border-border font-mono text-xs space-y-2">
+              <div class="p-4 rounded-xl bg-surface-subtle border border-border font-mono text-xs space-y-2">
                 <div class="flex items-center gap-2.5 text-heading">
                   <span class="w-1.5 h-1.5 rounded-full bg-accent"></span>
                   <span><strong>Compliance:</strong> Fully approved regulatory digital verification workflows</span>
@@ -363,7 +363,7 @@
               </div>
 
               <div class="flex flex-wrap gap-2 text-xs font-mono text-muted pt-1">
-                <span class="px-2.5 py-1 rounded bg-canvas border border-border text-body">Java</span>
+                <span class="px-2.5 py-1 rounded bg-canvas border border-border text-heading font-medium">Java</span>
                 <span class="px-2.5 py-1 rounded bg-canvas border border-border text-body">Spring Boot</span>
                 <span class="px-2.5 py-1 rounded bg-canvas border border-border text-body">Spring AOP</span>
                 <span class="px-2.5 py-1 rounded bg-canvas border border-border text-body">Security Architecture</span>
@@ -372,9 +372,9 @@
             </article>
 
             <!-- Card 4: Java 21 Local-First RAG Engine -->
-            <article class="work-card p-6 rounded-2xl bg-surface border border-border hover:border-border-light transition-all space-y-4" data-type="modern-java">
+            <article class="work-card p-6 rounded-2xl bg-surface border border-border hover:border-border-light hover:shadow-sm transition-all space-y-4" data-type="modern-java">
               <div class="flex flex-wrap items-center justify-between gap-2">
-                <span class="text-xs font-mono text-accent font-medium">Modern Java & AI</span>
+                <span class="text-xs font-mono text-accent font-semibold">Modern Java & AI</span>
                 <span class="text-xs font-mono text-muted">Research & Architecture</span>
               </div>
 
@@ -387,7 +387,7 @@
                 </p>
               </div>
 
-              <div class="p-4 rounded-xl bg-canvas border border-border font-mono text-xs space-y-2">
+              <div class="p-4 rounded-xl bg-surface-subtle border border-border font-mono text-xs space-y-2">
                 <div class="flex items-center gap-2.5 text-heading">
                   <span class="w-1.5 h-1.5 rounded-full bg-accent"></span>
                   <span><strong>Algorithms:</strong> Custom vector dot product and cosine similarity executed directly in Java</span>
@@ -399,7 +399,7 @@
               </div>
 
               <div class="flex flex-wrap gap-2 text-xs font-mono text-muted pt-1">
-                <span class="px-2.5 py-1 rounded bg-canvas border border-border text-heading font-medium">Java 21</span>
+                <span class="px-2.5 py-1 rounded bg-canvas border border-border text-heading font-semibold">Java 21</span>
                 <span class="px-2.5 py-1 rounded bg-canvas border border-border text-body">Spring Boot 3</span>
                 <span class="px-2.5 py-1 rounded bg-canvas border border-border text-body">Vector Math</span>
                 <span class="px-2.5 py-1 rounded bg-canvas border border-border text-body">SQLite</span>
@@ -411,7 +411,7 @@
         </section>
 
         <!-- SECTION 3: Bottom Call to Action -->
-        <footer class="p-8 rounded-2xl bg-surface border border-border space-y-6">
+        <footer class="p-8 rounded-2xl bg-surface border border-border shadow-xs space-y-6">
           <div class="space-y-2">
             <h3 class="text-2xl font-bold text-heading tracking-tight">
               Need reliable backend architecture or performance tuning?
@@ -423,11 +423,11 @@
 
           <div class="flex flex-wrap items-center gap-4">
             <a href="mailto:arnavmalhotra338@gmail.com" 
-               class="px-6 py-3 rounded-lg bg-heading text-canvas font-bold text-sm hover:bg-white transition-all shadow-md">
+               class="px-6 py-3 rounded-lg bg-slate-900 text-white font-semibold text-sm hover:bg-slate-800 transition-all shadow-sm">
               Email: arnavmalhotra338@gmail.com &rarr;
             </a>
             <a href="https://www.linkedin.com/in/arnav-malhotra" target="_blank" 
-               class="px-5 py-3 rounded-lg bg-canvas border border-border text-heading text-sm font-medium hover:border-border-light transition-colors">
+               class="px-5 py-3 rounded-lg bg-surface border border-border text-heading text-sm font-medium hover:border-border-light hover:bg-slate-50 transition-colors shadow-sm">
               Connect on LinkedIn
             </a>
           </div>
@@ -452,9 +452,11 @@
         if (btn.getAttribute('data-filter') === type) {
           btn.classList.add('active');
           btn.classList.remove('text-muted');
+          btn.classList.remove('bg-surface');
         } else {
           btn.classList.remove('active');
           btn.classList.add('text-muted');
+          btn.classList.add('bg-surface');
         }
       });
 
