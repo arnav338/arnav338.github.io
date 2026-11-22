@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Your Name | Senior Java Backend Engineer</title>
+  <!-- Tailwind CSS CDN for styling without any build steps -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      darkMode: 'class',
+      theme: {
+        extend: {
+          colors: {
+            brand: '#38bdf8', // Light blue accent
+          }
+        }
+      }
+    }
+  </script>
+</head>
+<body class="bg-slate-950 text-slate-100 font-sans antialiased selection:bg-brand selection:text-slate-950">
+
+  <!-- Main Container -->
+  <main class="max-w-3xl mx-auto px-6 py-16 sm:py-24 space-y-16">
+
+    <!-- Header / Hero -->
+    <header class="space-y-6">
+      <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-emerald-950/70 border border-emerald-800 text-emerald-400 text-xs font-medium">
+        <span class="w-2 h-2 rounded-full bg-emerald-500 animate-pulse"></span>
+        Available for Freelance & Contract Work
+      </div>
+
+      <div class="space-y-2">
+        <h1 class="text-3xl sm:text-4xl font-bold tracking-tight text-white">
+          Hi, I'm <span class="text-brand">Your Name</span>.
+        </h1>
+        <p class="text-lg text-slate-400">
+          Senior Java Backend Engineer with <strong>6+ years of experience</strong> building high-throughput microservices, event-driven architectures, and scalable cloud systems.
+        </p>
+      </div>
+
+      <!-- Quick Action Buttons -->
+      <div class="flex flex-wrap gap-4 pt-2">
+        <a href="mailto:your.email@example.com" class="px-5 py-2.5 rounded-lg bg-brand text-slate-950 font-semibold text-sm hover:bg-sky-400 transition">
+          Contact Me
+        </a>
+        <a href="https://linkedin.com/in/yourprofile" target="_blank" class="px-5 py-2.5 rounded-lg bg-slate-800 text-slate-200 border border-slate-700 font-medium text-sm hover:bg-slate-700 transition">
+          LinkedIn
+        </a>
+        <a href="https://github.com/yourusername" target="_blank" class="px-5 py-2.5 rounded-lg bg-slate-800 text-slate-200 border border-slate-700 font-medium text-sm hover:bg-slate-700 transition">
+          GitHub
+        </a>
+      </div>
+    </header>
+
+    <!-- Services / What I Do -->
+    <section class="space-y-6">
+      <h2 class="text-xl font-bold tracking-tight text-white border-b border-slate-800 pb-3">
+        What I Do
+      </h2>
+      <div class="grid sm:grid-cols-2 gap-4">
+        <div class="p-5 rounded-xl bg-slate-900 border border-slate-800 space-y-2">
+          <h3 class="font-semibold text-white">Microservices & Cloud Systems</h3>
+          <p class="text-sm text-slate-400">Designing high-concurrency Spring Boot microservices, Kafka event streams, and cloud deployments on AWS/GCP.</p>
+        </div>
+        <div class="p-5 rounded-xl bg-slate-900 border border-slate-800 space-y-2">
+          <h3 class="font-semibold text-white">Performance & Latency Tuning</h3>
+          <p class="text-sm text-slate-400">JVM garbage collection tuning, database query optimization (PostgreSQL/MySQL), and Redis caching strategies.</p>
+        </div>
+        <div class="p-5 rounded-xl bg-slate-900 border border-slate-800 space-y-2">
+          <h3 class="font-semibold text-white">Legacy Modernization</h3>
+          <p class="text-sm text-slate-400">Deconstructing monolithic legacy codebases into modular, testable, and maintainable services.</p>
+        </div>
+        <div class="p-5 rounded-xl bg-slate-900 border border-slate-800 space-y-2">
+          <h3 class="font-semibold text-white">API Architecture & Integration</h3>
+          <p class="text-sm text-slate-400">Robust RESTful APIs and gRPC services built with resilience, rate limiting, and zero-downtime migrations.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Case Studies / Featured Work -->
+    <section class="space-y-6">
+      <h2 class="text-xl font-bold tracking-tight text-white border-b border-slate-800 pb-3">
+        Featured Experience & Case Studies
+      </h2>
+
+      <div class="space-y-6">
+        <!-- Project 1 -->
+        <div class="p-6 rounded-xl bg-slate-900 border border-slate-800 space-y-3">
+          <div class="flex justify-between items-baseline flex-wrap gap-2">
+            <h3 class="font-semibold text-white text-base">High-Volume Payment & Transaction Engine</h3>
+            <span class="text-xs text-brand font-medium">FinTech / Payments</span>
+          </div>
+          <p class="text-sm text-slate-400">
+            Architected a resilient distributed transaction processing engine handling over 12,000 requests/second with idempotency and strict audit logging.
+          </p>
+          <div class="text-xs text-slate-300 font-mono space-y-1">
+            <p><span class="text-emerald-400">Impact:</span> Reduced P99 latency from 450ms to 75ms; zero double-charge incidents over 2+ years.</p>
+            <p><span class="text-slate-400">Stack:</span> Java 21, Spring Boot, Apache Kafka, PostgreSQL, Redis, Docker</p>
+          </div>
+        </div>
+
+        <!-- Project 2 -->
+        <div class="p-6 rounded-xl bg-slate-900 border border-slate-800 space-y-3">
+          <div class="flex justify-between items-baseline flex-wrap gap-2">
+            <h3 class="font-semibold text-white text-base">Monolith Decomposition & Kafka Event Pipeline</h3>
+            <span class="text-xs text-brand font-medium">SaaS / Enterprise</span>
+          </div>
+          <p class="text-sm text-slate-400">
+            Led the migration of a mission-critical order-processing monolith into independent microservices using domain-driven design and asynchronous event messaging.
+          </p>
+          <div class="text-xs text-slate-300 font-mono space-y-1">
+            <p><span class="text-emerald-400">Impact:</span> Decreased deployment cycle times by 60% and resolved database locking bottlenecks.</p>
+            <p><span class="text-slate-400">Stack:</span> Spring Cloud, Kafka, AWS (ECS, RDS), Kubernetes, Terraform</p>
+          </div>
+        </div>
+
+        <!-- Project 3 -->
+        <div class="p-6 rounded-xl bg-slate-900 border border-slate-800 space-y-3">
+          <div class="flex justify-between items-baseline flex-wrap gap-2">
+            <h3 class="font-semibold text-white text-base">Database & JVM Performance Optimization</h3>
+            <span class="text-xs text-brand font-medium">B2B Platform</span>
+          </div>
+          <p class="text-sm text-slate-400">
+            Diagnosed chronic memory leaks and slow SQL batch jobs. Refactored indexing, connection pooling (HikariCP), and tuned G1GC parameters.
+          </p>
+          <div class="text-xs text-slate-300 font-mono space-y-1">
+            <p><span class="text-emerald-400">Impact:</span> Reduced AWS EC2 server costs by 30% and cut overnight ETL execution time from 4h to 45m.</p>
+            <p><span class="text-slate-400">Stack:</span> Java, Spring Data JPA, PostgreSQL, Prometheus, Grafana</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Core Stack / Skills -->
+    <section class="space-y-4">
+      <h2 class="text-xl font-bold tracking-tight text-white border-b border-slate-800 pb-3">
+        Core Technologies
+      </h2>
+      <div class="flex flex-wrap gap-2 text-xs font-mono">
+        <span class="px-3 py-1.5 rounded-md bg-slate-900 border border-slate-800 text-slate-300">Java (11/17/21)</span>
+        <span class="px-3 py-1.5 rounded-md bg-slate-900 border border-slate-800 text-slate-300">Spring Boot / Spring Cloud</span>
+        <span class="px-3 py-1.5 rounded-md bg-slate-900 border border-slate-800 text-slate-300">Apache Kafka</span>
+        <span class="px-3 py-1.5 rounded-md bg-slate-900 border border-slate-800 text-slate-300">PostgreSQL / MySQL</span>
+        <span class="px-3 py-1.5 rounded-md bg-slate-900 border border-slate-800 text-slate-300">Redis</span>
+        <span class="px-3 py-1.5 rounded-md bg-slate-900 border border-slate-800 text-slate-300">Docker & Kubernetes</span>
+        <span class="px-3 py-1.5 rounded-md bg-slate-900 border border-slate-800 text-slate-300">AWS / Cloud Architecture</span>
+        <span class="px-3 py-1.5 rounded-md bg-slate-900 border border-slate-800 text-slate-300">Microservices Architecture</span>
+        <span class="px-3 py-1.5 rounded-md bg-slate-900 border border-slate-800 text-slate-300">Distributed Systems</span>
+      </div>
+    </section>
+
+    <!-- Footer / CTA -->
+    <footer class="pt-8 border-t border-slate-800 text-center space-y-4">
+      <h3 class="text-lg font-semibold text-white">Have a project or need consulting?</h3>
+      <p class="text-sm text-slate-400">I am open for backend consulting, architectural reviews, and contract work.</p>
+      <div>
+        <a href="mailto:your.email@example.com" class="inline-block px-6 py-3 rounded-lg bg-brand text-slate-950 font-bold text-sm hover:bg-sky-400 transition">
+          Get in Touch via Email
+        </a>
+      </div>
+      <p class="text-xs text-slate-600 pt-6">© 2026 Your Name. Built with pure HTML.</p>
+    </footer>
+
+  </main>
+
+</body>
+</html>
